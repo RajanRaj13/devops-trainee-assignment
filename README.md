@@ -282,12 +282,20 @@ git remote add origin <your-github-repo-url>
 git push -u origin main
 ```
 
-### Screenshots to include in your submission
+## Screenshots
 
-1. `sudo ufw status verbose`
-2. `docker ps`
-3. Browser window showing `http://<server-ip>/` output
-4. Terminal output of `infra_health_check.sh` running + `cat /var/log/infra_health.log`
+All verification screenshots are in the [`screenshots/`](./screenshots) folder.
+
+| # | Screenshot | Shows |
+|---|---|---|
+| 1 | `task1-ufw-status.png` | `sudo ufw status verbose` — firewall rules (2222/80/443 only) |
+| 2 | `task1-ssh-hardening-verification.png` | SSH config check + key-based login / blocked root login |
+| 3 | `task2-docker-compose-up-and-ps.png` | `docker compose up --build` + `docker ps` — all 4 containers running |
+| 4 | `task2-browser-reverse-proxy-output.png` | Browser output at `http://192.168.204.137/` via Nginx reverse proxy |
+| 5 | `task3-cron-job-setup.png` | Cron job registration + `systemctl status cron` |
+| 6 | `task3-health-check-execution.png` | `infra_health_check.sh` running + warning triggered on disk threshold |
+| 7 | `task4-db-backup-execution.png` | `db_backup.sh` running, backup archive created, restore command shown |
+| 8 | `task5-git-log-branches.png` | `git log --oneline --graph --all` — branch history and merges |
 
 ---
 
